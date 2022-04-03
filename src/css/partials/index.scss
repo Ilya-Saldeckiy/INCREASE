@@ -1,0 +1,147 @@
+
+.main{
+
+  &__section{
+    margin-bottom: 24px;
+  }
+
+  &__block{
+    display: flex;
+    column-gap: 24px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__sticky{
+    padding: 16px;
+    background-color: $grey;
+    position: sticky;
+    top: 20px;
+    height: 100%;
+    width: 22%;
+
+    @media (max-width: 1024px) {
+      position: static;
+      width: 100%;
+    }
+
+    &-caption{
+      @include f_14_b;
+      color: $White;
+      margin-bottom: 4px;
+    }
+
+    &-list{
+      padding-left: 0;
+
+      &__item{
+        & a{
+          @include f_14;
+          color: $White;
+        }
+      }
+    }
+  }
+
+  &__content{
+
+    width: 100%;
+
+    &-big{
+      padding: 16px;
+      background-color: $grey_light;
+      margin-bottom: 24px;
+
+      &__caption{
+        @include f_16_b;
+        margin-bottom: 24px;
+        color: $grey;
+      }
+
+      & ul{
+        padding-left: 48px;
+        margin-bottom: 32px;
+
+        & li{
+          list-style-type: square;
+          color: $grey;
+          font-size: 14px;
+          line-height: 22px;
+
+          & span{
+            font-weight: 700;
+          }
+        }
+      }
+
+      & p{
+        color: $grey;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
+    }
+
+    &-card{
+
+      margin-bottom: 24px;
+
+      &__list{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        &-item{
+          max-width: 17.9%;
+          width: 100%;
+          min-height: 146px;
+          height: auto;
+          background-color: $grey_light;
+
+          @media (max-width: 767px) {
+            max-width: 47.4%;
+          }
+
+          @media (max-width: 480px) {
+            max-width: 100%;
+          }
+        }
+
+      }
+
+    }
+
+    &-text{
+      display: flex;
+      column-gap: 24px;
+
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+
+      &__block{
+        width: 50%;
+        background-color: $grey_light;
+        padding: 16px;
+        padding-bottom: 40px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+
+        & p{
+          @include f_14;
+          color: $grey;
+        }
+      }
+    }
+
+  }
+
+}

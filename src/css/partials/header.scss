@@ -1,0 +1,67 @@
+
+.header{
+
+  padding-top: 24px;
+  margin-bottom: 24px;
+
+  &__position{
+    display: flex;
+    column-gap: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      row-gap: 24px;
+    }
+  }
+
+  &__small-block{
+    width: 15%;
+    background-color: $grey;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 100px;
+    }
+  }
+
+  &__medium-block{
+    width: 30%;
+    background-color: $grey;
+
+    @media (max-width: 767px) {
+      width: calc(50% - 12px);
+    }
+  }
+
+  &__contact-block{
+    width: 55%;
+    background-color: $grey;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @media (max-width: 767px) {
+      width: calc(50% - 12px);
+      padding: 12px;
+    }
+
+    & a{
+      display: block;
+      color: $White;
+      @include f_14;
+      font-weight: 400;
+
+      &:not(:last-child){
+        margin-bottom: 4px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+}
